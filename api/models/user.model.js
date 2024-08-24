@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+
 const userSchema = new mongoose.Schema(
   {
     username: {
@@ -17,8 +18,11 @@ const userSchema = new mongoose.Schema(
     },
     avatar:{
       type: String,
-      default: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+      default: "https://cdn.vectorstock.com/i/500p/53/42/user-member-avatar-face-profile-icon-vector-22965342.avif"
     },
   },
   { timestamps: true }
 );
+
+const User = mongoose.model('User', userSchema);
+export default User;
